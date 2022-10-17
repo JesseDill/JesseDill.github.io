@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Jesse Dill</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/f3b65d2978.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!-- <div class="logo">
+            <img src="img/logo_small.png" alt="">
+        </div> -->
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">home</a></li>
+                <!-- <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li> -->
+                <li class="nav__item"><a href="index.html#about" class="nav__link">about me</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">my work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <h1 class="section__title section__title--intro">
+            <strong>Recon Blind Chess Engine</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Playing chess with partial observability</p>
+        <img src="img/recon_chess.jpg" alt="" class="intro__img">
+    </section>
+
+    <div class="portfolio-item-individual">
+        <!-- <img src="img/teleop_2.png" alt="" class="teleop__img1"> -->
+
+        <h4>
+            Intro   
+        </h4>
+
+        <p>
+            I will discuss how 2 classmates and I built an engine to play a variant of chess similar to fog of war. In <a href = https://rbc.jhuapl.edu/>Reconnaissance Blind Chess (RBC)</a> there is limited information on where the opponents pieces are on the board. The only way to know where they are is to specify a 3x3 grid on the chess board, and within that grid you are able to detect enemy pieces. Before every move, the player can specify a grid to detect. I personally like to think of this like Battleship incorporated into chess, and now I'll give an overview of how the engine was made! 
+        </p>
+        <h4>
+            Distribution Tracking
+        </h4>
+        <p>
+            To account for the distribution of possible board states, we created a particle filter where each particle equates to a board position. After a new board information is gained, a lot of the particles become invalid so we prune them and populate new particles regularly. 
+        </p>
+        <h4>
+            Most Likely Position
+        </h4>
+        <p>
+            Given the distribution of possible board positions, the engine then tries to determine the most likely board state. The most likely board state is determined by the position that would most often occur in the distribution, weighted by a board evaluation heuristic and also random noise.
+        </p>
+        <h4>
+            Determing the Best Move
+        </h4>
+        <p>
+            With the most likely board state, the problem becomes finding the best move given the current chess position. For this, I made use of a search algorithm,  specifically, minimax search with alpha-beta pruning in order to traverse the possible branching positions and calculate the most advantageous action. Minimax requires a board evaluation heuristic to perform its search, and I experimented with 2 different methods of evaluation. The first one was a machine learning approach and the second approach was a heuristic based. Because of time constraints, the heuristic approach ended up being much more effective.
+        </p>
+        <p>
+            <br>
+            That was a terse overview of the architecture of the engine. Below are links to the github repository  and also a final report of how the engine was made. The report goes more in depth of how the different aspects of the engine were determined. It also discusses some of the hiccups experiences along the way. For example, originally my team originally intended to implement some form of Monte Carlo Tree Search in place of and/or alongside minimax search, but gave up on this idea in the end. Also, my apologies for the terrible formating in the repo, this was a class project and we were scrapped for time!
+            <br>
+            <a href = https://github.com/jbrachey/Recon-Chess>GitHub repo</a>
+            <br>
+            <a href= "recon_chess/Recon Chess Final Report.pdf" download="Reconaissance Blind Chess Engine Report"> Engine Report</a>
+        </p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="mailto:jessedill123@gmail.com" class="footer__link">jessedill123@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/JesseDill">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/jesse-n-dill/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js "></script>
+
+</body>
+
+</html>

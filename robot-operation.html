@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Jesse Dill</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/f3b65d2978.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!-- <div class="logo">
+            <img src="img/logo_small.png" alt="">
+        </div> -->
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">home</a></li>
+                <!-- <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li> -->
+                <li class="nav__item"><a href="index.html#about" class="nav__link">about me</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">my work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <h1 class="section__title section__title--intro">
+            <strong>Robot Operation</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Imagine the Operation board game but with teleoperation</p>
+        <img src="img/teleop_2.png" alt="" class="intro__img">
+    </section>
+
+    <div class="portfolio-item-individual">
+        <!-- <img src="img/teleop_2.png" alt="" class="teleop__img1"> -->
+        <p>
+            For my embedded systems and rapid prototyping class (CS 3651), a friend and I ended up building a little robot arm to play the board game Operation! To see it in action check out <a href="https://youtu.be/vCJRH1Wt3K4">this video</a>.
+        </p>
+        <p>
+            This project happened over the span of 2 months, involving lots of 3D printing, lasercutting, and playing around with circuits. If you'd like to find out in more in depth on how and what components was used to make this, below is are the links to the design document and also the 3D CAD and laser cut files.
+            <br>
+            <a href="teleop/2022-04-28_Final_Documentation.pdf" download="design document">
+            design document
+            </a>
+            <br>
+            <a href="teleop/Files for Submission" download="design files">
+            3D CAD and laser cut files
+            </a>
+        </p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="mailto:jessedill123@gmail.com" class="footer__link">jessedill123@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/JesseDill">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/jesse-n-dill/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js "></script>
+
+</body>
+
+</html>

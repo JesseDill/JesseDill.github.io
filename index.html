@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Jesse Dill</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+		integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/f3b65d2978.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+	<header>
+		<!-- <div class="logo">
+				<img src="img/logo_small.png" alt="">
+			</div> -->
+		<button class="nav-toggle" aria-label="toggle navigation">
+			<span class="hamburger"></span>
+		</button>
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="#home" class="nav__link">home</a></li>
+				<!-- <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li> -->
+				<li class="nav__item"><a href="#about" class="nav__link">about me</a></li>
+				<li class="nav__item"><a href="#work" class="nav__link">my work</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Introduction -->
+	<section class="intro" id="home">
+		<h1 class="section__title section__title--intro">
+			Hello there! <br>I'm <strong>Jesse Dill </strong>
+		</h1>
+		<!-- <p class="section__subtitle section__subtitle--intro">aspiring roboticist</p> -->
+		<img src="img/jesse_2.JPG" alt="picture of Jesse smiling" class="intro__img">
+	</section>
+
+	<!-- Services -->
+	<!-- <section class="my-services" id="services">
+		<h2 class="section__title section__title--services">What I do</h2>
+		<div class="services">
+			<div class="service">
+				<h3>service 1</h3>
+				<p>stuff</p>
+			</div> 
+			<div class="service">
+				<h3>service 1</h3>
+				<p>stuff</p>
+			</div> 
+			<div class="service">
+				<h3>service 1</h3>
+				<p>stuff</p>
+			</div> 
+		</div>
+		<a href="#work" class="btn">My Work</a>
+	</section> -->
+
+	<!-- About Me -->
+	<section class="about-me" id="about">
+		<h2 class="section__title section__title--about">about me</h2>
+		<p class="section__subtitle section__subtitle--about">BS/MS at Georgia Tech</p>
+
+		<div class="about-me__body">
+			<p>I am in my final year of my bachelors of computer science at Georgia Tech and concentrating in Devices
+				and Intelligence. I chose those threads because I think autonomous robots are cool! I'll also be continuing on my education with a masters at the same university.</p>
+			<p>On campus, I've helped run Georgia Tech's Chess Club for the last year, and I have also been a part of
+				the Aquabots: Maritime Robotics VIP team and also Robojackets. And this will also be my first semester being a teaching assistant
+				for the course CS 4476 Computer Vision.</p>
+			<p>Below I'd like to show you some of the things I've worked on in my time at school.</p>
+		</div>
+
+		<img src="img/chess_club.png" alt="picture of Jesse at Yosemite" class="about-me__img">
+	</section>
+
+	<!-- My Work -->
+	<section class="my-work" id="work">
+		<h2 class="section_title section__title--work">my work</h2>
+		<p class="section_subtitle section__subtitle--work">some stuff I've worked on in college</p>
+
+		<div class="portfolio">
+			<!-- portfolio item 01 -->
+			<a href="robot-operation.html" class="portfolio__item">
+				<img src="img/portfolio_teleop.png" alt="Surgery Teleoperation" class="portfolio__img">
+			</a>
+
+			<!-- portfolio item 02 -->
+			<a href="recon-chess.html" class="portfolio__item">
+				<img src="img/chess_variant.png" alt="Partial Observability Chess Engine" class="portfolio__img">
+			</a>
+
+			<!-- portfolio item 03
+				<a href="#" class="portfolio__item">
+					<img src="img/machine_learning.png" alt="Machine Learning Theory Course" class="portfolio__img"> 
+				</a> -->
+
+			<!-- portfolio item 04 -->
+			<!-- <a href="robot-operation.html" class="portfolio__item">
+				<img src="img/comp_vision.png" alt="Computer Vision Course" class="portfolio__img">
+			</a> -->
+
+			<!-- portfolio item 05 -->
+			<!-- <a href="robot-operation.html" class="portfolio__item">
+				<img src="img/game_dev.png" alt="Unity Game Development" class="portfolio__img">
+			</a> -->
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<footer class="footer">
+		<a href="mailto:jessedill123@gmail.com" class="footer__link">jessedill123@gmail.com</a>
+		<ul class="social-list">
+			<li class="social-list__item">
+				<a class="social-list__link" href="https://github.com/JesseDill">
+					<i class="fa-brands fa-github"></i>
+				</a>
+			</li>
+			<li class="social-list__item">
+				<a class="social-list__link" href="https://www.linkedin.com/in/jesse-n-dill/">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+	<script src="js/index.js "></script>
+
+</body>
+
+</html>
